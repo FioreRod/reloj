@@ -14,7 +14,8 @@ function startTimer() {
 }
 
 function setTimer() {
-    clock.innerHTML = `<p class="number">${hours > 9 ? hours : ('0' + hours)}</p><span>hs</span>
+    clock.innerHTML = `<p>Tiempo restante:</p>
+                        <p class="number">${hours > 9 ? hours : ('0' + hours)}</p><span>hs</span>
                         <p class="number">${minutes > 9 ? minutes : ('0' + minutes)}</p><span>min</span>
                         <p class="number">${seconds > 9 ? seconds : ('0' + seconds)}</p><span>sec</span>`;
 }
