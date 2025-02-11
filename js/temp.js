@@ -13,6 +13,7 @@ function startTimer() {
     countdown();
     
     document.getElementById('play').disabled = true;  // Desactiva el botón de inicio
+    document.getElementById('pause').disabled = false;  // Desactiva el botón de pausa
 }
 
 function setTimer() {
@@ -55,9 +56,17 @@ function runner() {
     setTimer();
 }
 
+function pauseTimer() {
+    clearInterval(repeater);  // Detiene la cuenta regresiva sin reiniciar valores
+    document.getElementById('play').disabled = false;  // Reactiva el botón de inicio para continuar
+    document.getElementById('pause').disabled = true;  // Desactiva el botón de inicio
+}
+
+
 function stopTimer() {
     clearInterval(repeater);
     inputs.forEach(input => input.disabled = false);  // Reactiva los inputs al detener el temporizador
     document.getElementById('play').disabled = false;  // Reactiva el botón de inicio
+    document.getElementById('pause').disabled = false;  // Desactiva el botón de pausa
     location.reload();
 }
