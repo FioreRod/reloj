@@ -63,10 +63,14 @@ button{
     color: antiquewhite;
 }
 
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 #buttons{
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     width: 100%;
-    border: 1px solid red;
     height: 50px;
     display: flex;
     justify-content: space-evenly;

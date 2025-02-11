@@ -10,14 +10,19 @@ window.addEventListener('load', () => {
 function startTimer() {
     parseTime();
     setTimer();  
-    countdown()  
+    countdown();
+    
+    document.getElementById('play').disabled = true;  // Desactiva el botón de inicio
 }
 
 function setTimer() {
-    clock.innerHTML = `<p class="number">${hours > 9 ? hours : ('0' + hours)}</p><span>hs</span>
-                        <p class="number">${minutes > 9 ? minutes : ('0' + minutes)}</p><span>min</span>
-                        <p class="number">${seconds > 9 ? seconds : ('0' + seconds)}</p><span>sec</span>`;
+    inputs[0].value = hours > 9 ? hours : ('0' + hours);
+    inputs[1].value = minutes > 9 ? minutes : ('0' + minutes);
+    inputs[2].value = seconds > 9 ? seconds : ('0' + seconds);
+
+    inputs.forEach(input => input.disabled = true);  // Desactiva los inputs mientras corre el temporizador
 }
+
 
 function parseTime() {
     hours = Number(inputs[0].value);
@@ -52,5 +57,7 @@ function runner() {
 
 function stopTimer() {
     clearInterval(repeater);
+    inputs.forEach(input => input.disabled = false);  // Reactiva los inputs al detener el temporizador
+    document.getElementById('play').disabled = false;  // Reactiva el botón de inicio
     location.reload();
 }
