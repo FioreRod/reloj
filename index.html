@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.1/css/all.css" crossorigin="anonymous">
 
     <title> Temporizador </title>
 </head>
-<body>
+
+<body class="centrar">
     <header></header>
 
     <main>
-        <div id="temporizador">
-            <p>Tiempo restante:</p>
-            <input type="text" class="number" maxlength="2" value="00"> <span>hs</span>
-            <input type="text" class="number" maxlength="2" value="00"> <span>min</span>
-            <input type="text" class="number" maxlength="2" value="00"> <span>sec</span>
-        </div>
+        <div class="contenedor">
+            <div id="temporizador">
+                <p>Tiempo restante:</p>
+                <input type="text" class="number" maxlength="2" value="00"> <span>hs</span>
+                <input type="text" class="number" maxlength="2" value="00"> <span>min</span>
+                <input type="text" class="number" maxlength="2" value="00"> <span>sec</span>
+            </div>
 
-        <div id="buttons">
-            <button id="play" onclick="startTimer()"> </button>
-            <button id="pause" onclick="pauseTimer()"> </button>
-            <button id="stop" onclick="stopTimer()"> </button>
+            <div id="buttons">
+                <button id="play" onclick="startTimer()"> <i class="fa-solid fa-play"></i> </button>
+                <button id="pause" onclick="pauseTimer()"> <i class="fa-solid fa-pause"></i> </button>
+                <button id="stop" onclick="stopTimer()"> <i class="fa-solid fa-stop"></i> </button>
 
+            </div>
         </div>
     </main>
-    
+
     <footer></footer>
 
-    <script src="temp.js"></script>
+    <script src="./js/temp.js"></script>
 </body>
+
 </html>
