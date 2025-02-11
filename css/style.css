@@ -27,11 +27,19 @@ body{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
 }
 
+.text{
+    height: 50px;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+}
+
 #temporizador{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 32px;
     text-shadow: -1px 0px 15px rgba(0,0,0,0.25);
     color: lightgray;
+    height: 150px;
     width: 100%;
     margin: 10%;
 }
@@ -58,6 +66,8 @@ button{
 #buttons{
     margin-bottom: 10%;
     width: 100%;
+    border: 1px solid red;
+    height: 50px;
     display: flex;
     justify-content: space-evenly;
 }
